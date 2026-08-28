@@ -2,19 +2,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Counter</title>
+        <title>Guessing Game</title>
         <link rel="stylesheet" href="css.css"> 
     </head>
-    
     <body>
+        <h1>Welcome to the GUESSING GAME</h1>
+        <h2 class="show" id="Show">Click the "Spawn New Number"<br>Then guess the number using the buttons below</h2>
+        <button id="Spawn">Spawn New Number</button>
         <div class="bg">
-            <label id="label">0</label>
-            <div class="btns">
-                <button id="Decrease">DECREASE</button>
-                <button id="Reset">RESET</button>
-                <button id="Increase">INCREASE</button>
+            <div class="upper">
+                <button id="DecreaseMore" disabled>DECREASE -10</button>
+                <label id="label">0</label>
+                <button id="IncreaseMore" disabled>INCREASE +10</button>
+            </div>
+            <div class="lower">
+                <button id="Decrease" disabled>DECREASE -1</button>
+                <button id="Reset" disabled>RESET</button>
+                <button id="Increase" disabled>INCREASE +1</button>
             </div>
         </div>
+        <button id="Submit" disabled>Submit</button>
+
 
      <script src="script.js"></script>
     </body>
