@@ -10,12 +10,12 @@ body{
 }
 *{
     box-sizing: border-box;
+    
 }
-
 .bg{
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 20px;
     align-items: center;
     width: fit-content;
     padding: 50px;
@@ -24,21 +24,64 @@ body{
     background-color: rgb(255, 255, 255, .25);
     backdrop-filter: blur(3px);
 }
-label{
-    font-size: 200px;
+.upper{
+    display: flex;
+    padding: 20px;
 }
-.bg button:not(#Reset){
+#DecreaseMore{
     height: 100px;
     padding: 20px;
     font-size: 30px;
     border-radius: 20px;
+    background-color: rgb(168, 208, 243);
+    border: none;
+    cursor: pointer;
+    transition: background-color, .5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#IncreaseMore{
+    height: 100px;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: rgb(168, 208, 243);
+    border: none;
+    cursor: pointer;
+    transition: background-color, .5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+h1{
+    transition: all 1s ease;
+    font-size: 50px;
+}
+.show{
+    transition: all 0s ease-in-out;
+    font-size: 25px;
+    color: rgb(0, 0, 255);
+    text-align: center;
+    margin-top: -15px;
+}
+label{
+    font-size: 200px;
     margin-right: 20px;
+}
+.bg button:not(#Reset, #DecreaseMore, #IncreaseMore){
+    height: 100px;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 20px;
     margin-top: 20px;
     background-color: rgb(168, 208, 243);
     border: none;
     cursor: pointer;
     transition: background-color, .5s;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.bg button:not(#Increase,#DecreaseMore,#IncreaseMore){
+    margin-right: 30px;
+}
+.upper button:not(#IncreaseMore){
+    margin-right: 30px;
 }
 .bg button:hover:not(#Reset){
     transition: none;
@@ -49,9 +92,8 @@ label{
     padding: 20px;
     font-size: 30px;
     border-radius: 20px;
-    margin-right: 20px;
     background-color: rgb(250, 163, 163);
-    transition: background-color, .5s;
+    transition: background-color, 1s;
     border: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -63,4 +105,70 @@ label{
     outline: 2px solid black;
     transform: translateY(5px);
     box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 5px inset, rgba(0, 0, 0, 0.5) -1px -2px 5px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#Spawn{
+    padding: 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    background-color: rgb(157, 235, 84);
+    border: none;
+    cursor: pointer;
+    transition: background-color, .5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#Spawn:hover{
+    transition: none;
+    background-color: rgb(120, 230, 17);
+}
+#Spawn:active{
+    outline: 2px solid black;
+    transform: translateY(5px);
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 5px inset, rgba(0, 0, 0, 0.5) -1px -2px 5px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+#Submit{
+    width: 300px;
+    padding: 20px;
+    font-size: 50px;
+    border-radius: 20px;
+    margin-top: 10px;
+    background-color: rgb(121, 231, 154);
+    border: none;
+    cursor: not-allowed;
+    transition: background-color, .5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#Submit:hover{
+    transition: none;
+    background-color: rgba(0, 255, 0, 0.76);
+}
+#Submit:active{
+    outline: 2px solid black;
+    transform: translateY(5px);
+    transition: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 5px inset, rgba(0, 0, 0, 0.5) -1px -2px 5px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.bg button:disabled{
+    opacity: .8;
+    outline: none;
+}
+#Submit:disabled{
+    opacity: .8;
+    outline: none;
+}
+
+.guessedRight{
+    transition: all 0s ease-in-out;
+    font-size: 50px;
+    color: rgb(0, 255, 0);
+    -webkit-text-stroke:1px black;
+    text-align: center;
+    margin-top: -15px;
+}
+
+
+@media (max-width:390px){
+    .upper button, .lower button{ width: 28%;}
+    #spawn, #Submit{ width: 70%;}
 }
